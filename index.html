@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turistična kmetija Lukač · Montinjan, slovenska Istra</title>
+<meta name="description" content="Izletniška kmetija v deželi refoška, 8 km od Kopra. Obed po naročilu, ki ga pripravi vinska kraljica Selma Lukač, pršut, fuži, bobiči ter degustacija vina in olja.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Uredniški "luksuz": slonovina + črnilo + refošk, velike fotografije, tanke črte, veliko zraka */
+:root{
+  --papir:#F5F1E8; --papir2:#ECE5D6; --crnilo:#1C1E16; --tekst:#3A3B31; --sivo:#7B7A6C;
+  --refosk:#6B1A2C; --oliva:#6A7243; --crta:rgba(28,30,22,.16);
+  --disp:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;
+  --serif:"Libre Caslon Text",Georgia,serif;
+  --sans:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--tekst);background:var(--papir);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.img{background-size:cover;background-position:center;background-color:#d6d0bf}
+.nad{font-family:var(--sans);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--refosk)}
+h1,h2,h3{font-family:var(--disp);font-weight:400;color:var(--crnilo);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(36px,5.4vw,64px)}
+h2 em,h1 em{font-family:var(--serif);font-style:italic;color:var(--refosk)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;text-decoration:none;border:1px solid currentColor;cursor:pointer;background:transparent;transition:background .25s,color .25s}
+.btn-p{background:var(--refosk);border-color:var(--refosk);color:#fff}
+.btn-p:hover{background:#561523}
+.btn-l{color:#fff}
+.btn-l:hover{background:#fff;color:var(--crnilo)}
+.btn-d{color:var(--crnilo)}
+.btn-d:hover{background:var(--crnilo);color:#fff}
+
+/* trak + nav */
+.trak{background:var(--crnilo);color:#e9e6da;font-size:12px;letter-spacing:.04em;text-align:center;padding:8px 16px}
+.trak b{color:#fff;font-weight:600}
+nav{position:absolute;left:0;right:0;z-index:20;color:#fff}
+nav.lep{position:fixed;top:0;background:rgba(245,241,232,.96);color:var(--crnilo);border-bottom:1px solid var(--crta);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:var(--disp);font-size:24px;text-decoration:none;line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;opacity:.75;margin-top:5px}
+.navl{display:flex;gap:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.navl a{text-decoration:none;opacity:.85}
+.navl a:hover{opacity:1}
+.navr{display:flex;align-items:center;gap:18px}
+.jez{display:flex;gap:10px;font-size:11px;letter-spacing:.14em}
+.jez span{opacity:.55}.jez span.on{opacity:1;border-bottom:1px solid currentColor}
+nav .btn{padding:11px 18px}
+nav:not(.lep) .btn{color:#fff}
+nav.lep .btn{color:var(--crnilo)}
+@media(max-width:960px){.navl{display:none}}
+@media(max-width:520px){.jez{display:none}.logo{font-size:21px}.logo small{letter-spacing:.16em;font-size:8.5px}nav .btn{display:none}}
+
+/* hero */
+.hero{position:relative;height:min(100svh,880px);min-height:620px;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;transform:scale(1.06);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,13,8,.45) 0%,rgba(12,13,8,.15) 35%,rgba(12,13,8,.72) 100%)}
+.hero .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:72px}
+.hero .nad{color:#e8d9b8}
+.hero h1{color:#fff;font-size:clamp(46px,9vw,118px);margin:18px 0 22px;max-width:11ch}
+.hero h1 em{color:#f1dfb9}
+.hero p{font-family:var(--serif);font-size:clamp(17px,2.1vw,21px);max-width:44ch;opacity:.94}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .meta{position:absolute;right:24px;bottom:72px;z-index:2;text-align:right;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:2;opacity:.85}
+@media(max-width:820px){.hero .meta{display:none}.hero .wrap{padding-bottom:120px}.hero .cta .btn-l{display:none}}
+
+section{padding:120px 0}
+@media(max-width:820px){section{padding:80px 0}}
+
+/* uvod */
+.uvod{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.uvod .izjava{font-family:var(--disp);font-size:clamp(28px,3.6vw,44px);line-height:1.2;color:var(--crnilo)}
+.uvod .izjava em{font-family:var(--serif);color:var(--refosk)}
+.uvod p.t{margin-top:28px;max-width:52ch;color:var(--tekst)}
+.podpis{margin-top:30px;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--sivo)}
+.podpis b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:22px;color:var(--crnilo)}
+.par{position:relative;height:640px}
+.par .a{position:absolute;right:0;top:0;width:72%;height:78%}
+.par .b{position:absolute;left:0;bottom:0;width:48%;height:52%;border:10px solid var(--papir)}
+.par figcaption{position:absolute;right:0;bottom:0;width:46%;font-size:12px;letter-spacing:.06em;color:var(--sivo);line-height:1.5}
+@media(max-width:900px){.uvod{grid-template-columns:1fr;gap:48px}.par{height:460px}}
+
+/* številke */
+.stevilke{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--crta);border-bottom:1px solid var(--crta)}
+.stevilke div{padding:34px 24px;border-right:1px solid var(--crta)}
+.stevilke div:last-child{border-right:0}
+.stevilke b{display:block;font-family:var(--disp);font-weight:400;font-size:44px;color:var(--crnilo);line-height:1}
+.stevilke span{display:block;margin-top:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sivo)}
+@media(max-width:820px){.stevilke{grid-template-columns:1fr 1fr}.stevilke div:nth-child(2){border-right:0}.stevilke div:nth-child(-n+2){border-bottom:1px solid var(--crta)}}
+
+/* miza */
+.miza{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--papir2)}
+.miza .foto{min-height:720px}
+.miza .vs{padding:110px 80px}
+.miza h2{margin:16px 0 22px}
+.miza .opis{max-width:46ch;color:var(--tekst)}
+.jedi{margin-top:40px;list-style:none}
+.jedi li{display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px solid var(--crta)}
+.jedi li b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--crnilo);white-space:nowrap}
+.jedi li i{flex:1;border-bottom:1px dotted rgba(28,30,22,.3);transform:translateY(-5px)}
+.jedi li span{font-size:13px;color:var(--sivo);text-align:right}
+.opomba{margin-top:26px;font-family:var(--serif);font-style:italic;color:var(--sivo)}
+@media(max-width:900px){.miza{grid-template-columns:1fr}.miza .foto{min-height:380px}.miza .vs{padding:64px 24px}.jedi li span{display:none}}
+
+/* pas */
+.pas{position:relative;height:78vh;min-height:460px;max-height:760px;color:#fff;display:flex;align-items:flex-end}
+.pas .img{position:absolute;inset:0}
+.pas::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,13,8,.75),rgba(12,13,8,0) 60%)}
+.pas .wrap{position:relative;z-index:2;padding-bottom:64px;width:100%}
+.pas blockquote{font-family:var(--disp);font-size:clamp(28px,4.4vw,54px);line-height:1.15;max-width:20ch}
+.pas cite{display:block;margin-top:18px;font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+
+/* klet */
+.klet-g{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:56px}
+.klet-g .k1{grid-column:1/6;aspect-ratio:4/5}
+.klet-g .k2{grid-column:6/9;aspect-ratio:3/4;margin-top:120px}
+.klet-g .k3{grid-column:9/13;aspect-ratio:4/5;margin-top:40px}
+.klet-t{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px}
+.klet-t h3{font-size:26px;margin-bottom:10px}
+.klet-t p{color:var(--tekst);font-size:15.5px}
+.glava{display:grid;grid-template-columns:7fr 5fr;gap:60px;align-items:end}
+.glava p{color:var(--tekst);max-width:46ch}
+@media(max-width:900px){.klet-g{grid-template-columns:1fr 1fr}.klet-g .k1{grid-column:1/-1;aspect-ratio:4/3}.klet-g .k2,.klet-g .k3{grid-column:auto;margin-top:0;aspect-ratio:3/4}.klet-t{grid-template-columns:1fr;gap:28px}.glava{grid-template-columns:1fr;gap:20px}}
+
+/* leto */
+.leto{background:var(--crnilo);color:#e9e6da}
+.leto h2{color:#fff}
+.leto .nad{color:#c7c79a}
+.casovnica{display:grid;grid-template-columns:repeat(3,1fr);margin-top:64px;border-top:1px solid rgba(255,255,255,.2)}
+.casovnica div{padding:36px 36px 0 0;position:relative}
+.casovnica div::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:#c7c79a;border-radius:50%}
+.casovnica small{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c7c79a}
+.casovnica b{display:block;font-family:var(--disp);font-weight:400;font-size:34px;color:#fff;margin:12px 0 10px;line-height:1.1}
+.casovnica span{opacity:.8;font-size:15.5px}
+.zdaj{display:inline-block;margin-left:8px;padding:2px 8px;border:1px solid #c7c79a;color:#c7c79a;font-size:10px;letter-spacing:.16em}
+@media(max-width:820px){.casovnica{grid-template-columns:1fr}.casovnica div{padding:32px 0 8px}}
+
+/* galerija */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;grid-auto-flow:dense;gap:14px;margin-top:56px}
+.gal button{border:0;padding:0;cursor:zoom-in;background-size:cover;background-position:center;background-color:#d6d0bf;transition:filter .3s}
+.gal button:hover{filter:brightness(1.06)}
+.gal .v{grid-row:span 2}
+.gal .s{grid-column:span 2}
+@media(max-width:820px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal .s{grid-column:span 2}}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(12,13,8,.94);display:flex;align-items:center;justify-content:center;padding:24px}
+.lb img{max-height:88vh;max-width:100%;object-fit:contain}
+.lb button{position:absolute;top:18px;right:20px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;line-height:1}
+
+/* mnenja */
+.mnenja{display:grid;grid-template-columns:4fr 8fr;gap:80px}
+.ocena b{display:block;font-family:var(--disp);font-weight:400;font-size:110px;line-height:.9;color:var(--crnilo)}
+.ocena span{display:block;margin-top:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sivo)}
+.zv{color:var(--refosk);letter-spacing:4px;font-size:18px;margin-top:10px}
+.citati{display:grid;gap:40px}
+.citati figure{border-top:1px solid var(--crta);padding-top:28px}
+.citati blockquote{font-family:var(--serif);font-size:clamp(19px,2vw,23px);line-height:1.5;color:var(--crnilo)}
+.citati figcaption{margin-top:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sivo)}
+@media(max-width:900px){.mnenja{grid-template-columns:1fr;gap:40px}.ocena b{font-size:84px}}
+
+/* najava */
+.najava{display:grid;grid-template-columns:5fr 7fr;gap:0;background:var(--papir2)}
+.najava .foto{min-height:640px}
+.najava .vs{padding:100px 80px}
+.najava h2{margin:16px 0 18px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px;margin-top:40px}
+form .f{grid-column:1/-1}
+label{display:grid;gap:4px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--sivo);font-weight:600}
+input,select,textarea{font:inherit;font-family:var(--serif);font-size:18px;letter-spacing:0;text-transform:none;color:var(--crnilo);background:transparent;border:0;border-bottom:1px solid rgba(28,30,22,.35);padding:10px 0;width:100%;border-radius:0}
+select{appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231C1E16' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 4px center}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--refosk)}
+form .btn{justify-self:start;margin-top:10px}
+@media(max-width:900px){.najava{grid-template-columns:1fr}.najava .foto{min-height:320px}.najava .vs{padding:64px 24px}form{grid-template-columns:1fr}}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.kontakt dl{margin-top:36px;display:grid;gap:24px}
+.kontakt dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sivo);font-weight:600}
+.kontakt dd{font-family:var(--serif);font-size:21px;color:var(--crnilo);margin-top:4px;overflow-wrap:anywhere}
+.kontakt dd a{text-decoration:none;border-bottom:1px solid var(--crta)}
+.kontakt dd a:hover{border-color:var(--refosk)}
+.map{min-height:460px;filter:grayscale(.35) sepia(.12)}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+@media(max-width:900px){.kontakt{grid-template-columns:1fr;gap:40px}.map,.map iframe{min-height:320px}}
+
+footer{border-top:1px solid var(--crta);padding:40px 0 120px;font-size:13px;color:var(--sivo)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer .logo{color:var(--crnilo);font-size:20px}
+
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;background:var(--papir);border-top:1px solid var(--crta);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))}
+.mob .btn{flex:1;justify-content:center;padding:15px 10px}
+@media(max-width:820px){.mob{display:flex;gap:10px}}
+
+.rev{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.rev.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.hero .bg{animation:none;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="trak"><b>Predogled</b> · Brezplačen osnutek nove spletne strani, pripravil Spletni Atelje</div>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#">Lukač<small>Turistična kmetija · Montinjan</small></a>
+  <div class="navl"><a href="#miza">Za mizo</a><a href="#klet">V kleti</a><a href="#leto">Skozi leto</a><a href="#galerija">Galerija</a><a href="#kontakt">Kontakt</a></div>
+  <div class="navr">
+    <div class="jez" title="Stran je lahko tudi v italijanščini in angleščini"><span class="on">SL</span><span>IT</span><span>EN</span></div>
+    <a class="btn" href="#najava">Najava</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="bg img" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SkitmqNs6UFpWJMK6fNOcnp_MewPyyqtuVHM7r6hZ316UifEK3ZPvwq6SihRcMi08o85ZV3Stp8Lqd2_8liH9Qwp7VVxiN9I4yY4hRm_LJFSGQIuNcwbGFIJQ2N8fEiKcHajaN=w2200')"></div>
+  <div class="wrap">
+    <div class="nad">Slovenska Istra · v deželi refoška</div>
+    <h1>Kmetija <em>Lukač</em></h1>
+    <p>Med trtami in oljkami, z razgledom na koprski zaliv. Obed po naročilu vam osebno pripravi vinska kraljica Selma Lukač.</p>
+    <div class="cta"><a class="btn btn-p" href="#najava">Najavite obisk</a><a class="btn btn-l" href="#miza">Kaj vas čaka na mizi</a></div>
+  </div>
+  <div class="meta">Montinjan 1b<br>8 km od Kopra<br>do 50 gostov</div>
+</header>
+
+<section><div class="wrap uvod">
+  <div class="rev">
+    <div class="nad">Dobrodošli</div>
+    <p class="izjava" style="margin-top:18px">Če še niste slišali za Montinjan, vasico med Vanganelom in Marezigami, <em>potem le pot pod noge.</em></p>
+    <p class="t">Pričakala vas bo živahna ekipa družinskih članov in prijateljev, ki bo poskrbela, da boste v mirnem okolju uživali dobrote slovenske Istre. Kuhamo po predhodnem naročilu, zato je vse pripravljeno prav za vas: sveže, domače in po družinskih receptih.</p>
+    <div class="podpis"><b>Selma Lukač</b> druga slovenska vinska kraljica</div>
+  </div>
+  <figure class="par rev">
+    <div class="img a" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RTv7LI-CfEct_BycK8Y6lA9QywcJjLg1-R-2f-yY18cnSlOZPLe0lcHOfsg8TLR3NjNYOGSvDfJ1XBKlSTdgc-M13fAf1Yl1I2CCUldeLScOMfNXEe-BkckTbu40ZeIlwvcuI=w1200')"></div>
+    <div class="img b" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QrUan3tpnTaEYtO8lazpJ8dvvqVzSsQtzkww-8kqOUolG4rQJonc-Sh8srIujCIciOKpXWR1QyaLH_kYYLEBLX3cfWYwmuOOnDC7eanGktWqck4WGhxNb1XW3XNTGlHE5FHbqT=w900')"></div>
+    <figcaption>Hiša in vrt v Montinjanu, med Vanganelom in Marezigami.</figcaption>
+  </figure>
+</div></section>
+
+<div class="wrap"><div class="stevilke rev">
+  <div><b>4,8</b><span>ocena na Googlu</span></div>
+  <div><b>50</b><span>sedežev za goste</span></div>
+  <div><b>13 ha</b><span>trt in oljk</span></div>
+  <div><b>8 km</b><span>do Kopra in morja</span></div>
+</div></div>
+
+<section id="miza" style="padding-bottom:0;padding-top:80px"><div class="miza">
+  <div class="foto img rev" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TwQoE736dOohJ6Ne4UFxuhN3uxKo25HoUbSJ2BeX1N1Jzw4D2hff0ygfgNZd_s-mRpwLxO_NEenx-X4QB4fRY9y911zqRUwuE_Ato2hH2cKqJCSFCr4JQ5i8mgKwB9jgbOVXGH=w1400')"></div>
+  <div class="vs rev">
+    <div class="nad">Za mizo</div>
+    <h2>Istrska miza, <em>po naročilu</em></h2>
+    <p class="opis">Obed vam osebno pripravi Selma Lukač. Na mizo pridejo jedi, ki jih v družini kuhamo že generacije.</p>
+    <ul class="jedi">
+      <li><b>Pršut in suhe mesnine</b><i></i><span>domača proizvodnja</span></li>
+      <li><b>Njoki in fuži</b><i></i><span>ročno narejeni</span></li>
+      <li><b>Bakala in polenta</b><i></i><span>istrska klasika</span></li>
+      <li><b>Bobiči</b><i></i><span>koruzna mineštra</span></li>
+      <li><b>Zelenjavne priloge</b><i></i><span>po družinskih receptih</span></li>
+      <li><b>Kruh in pecivo</b><i></i><span>dnevno sveže</span></li>
+    </ul>
+    <p class="opomba">Poskrbimo tudi za vegetarijance in goste s posebnimi dietami.</p>
+  </div>
+</div></section>
+
+<div class="pas">
+  <div class="img" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RUErbGmyVM717G1GvPbMAoHCa6UMMVRmu4RhxHxtsuCSO5gJSs9Z3a8H80hS0StoqXPiCJBIegfxSnzS-XE2IZzPIjLSgqnxX5hD7Uz6z7sjSus3u5YIrNamy9PDcBBMEbq5XprA=w2200')"></div>
+  <div class="wrap rev">
+    <blockquote>Zelo primerno za razna praznovanja, saj je ambient enkraten.</blockquote>
+    <cite>Aleksandra Petaroš · mnenje na Googlu</cite>
+  </div>
+</div>
+
+<section id="klet"><div class="wrap">
+  <div class="glava rev">
+    <div><div class="nad">V kleti</div><h2 style="margin-top:16px">Refošk, olje <em>in liker</em></h2></div>
+    <p>V kleti vam pripravimo degustacijo vina in oljčnega olja z naše kmetije, ponudimo žganja in refoškov liker. Za najmlajše imamo domač bezgov in metin sok.</p>
+  </div>
+  <div class="klet-g">
+    <div class="img k1 rev" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RA-PHj92mNGIMAGLhUIq1FUIaDv2D1A_whSbdf1nudPvuO4nOAUEUsDP4N8quOEkLS4TIKFyl4UpTdBwzmnEKWz7QaX4WdYEYM2-KFLYmxTQQfuRv9Ns7Hw5uO-McEKGd0uKmaOA=w1200')"></div>
+    <div class="img k2 rev" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qbl8dDlUF6mI6GiDGTNK4Lw4bDhupa-OsuFWtIfJWVRvYf_vZCTGpAoQ38KHEq1eEsf47DBbFYjkHBeElpibpus3z5QeZp2GMg0IPIUYhb02xiFQHfgGoxQYGoA4_R67Ah5L8d=w900')"></div>
+    <div class="img k3 rev" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SSWsJHfnU3W-q7AAAs_UXQr82Yu5sE4B5uRZSpMyL4qa9MorMF1vx-AZfslpyq46pVXjRc7T8-kIkFMyqIsjXiaB3WHt40Epz_yw1f1a6mJcN0BIxSny5MqaN6rIoSn8_FdXT4=w1000')"></div>
+  </div>
+  <div class="klet-t">
+    <div class="rev"><h3>Refošk</h3><p>Sredi dežele refoška, kjer trta raste na terasah nad zalivom.</p></div>
+    <div class="rev"><h3>Oljčno olje</h3><p>Iz naših oljk, za degustacijo ob kruhu iz krušne peči.</p></div>
+    <div class="rev"><h3>Žganja in liker</h3><p>Domača žganja in refoškov liker za konec obeda.</p></div>
+  </div>
+</div></section>
+
+<section id="leto" class="leto"><div class="wrap">
+  <div class="nad rev">Skozi leto</div>
+  <h2 class="rev" style="margin-top:16px">Trije prazniki, <em style="color:#e3c9a1">trije razlogi</em> za vrnitev</h2>
+  <div class="casovnica">
+    <div class="rev"><small>Maj</small><b>Praznik refoška</b><span>Mlado vino, odprte kleti in istrska kuhinja v vseh vaseh.</span></div>
+    <div class="rev"><small>Avgust</small><b>Šagra pod hrastom</b><span>Vaški praznik v senci starega hrasta, kot je v Istri navada.</span></div>
+    <div class="rev"><small>November <span class="zdaj">ZDAJ</span></small><b>Martinovanje</b><span>Tradicionalno martinovanje z domačo kapljico. Najavite se pravočasno.</span></div>
+  </div>
+</div></section>
+
+<section id="galerija"><div class="wrap">
+  <div class="glava rev">
+    <div><div class="nad">Galerija</div><h2 style="margin-top:16px">Kmetija <em>od blizu</em></h2></div>
+    <p>Terasa pod brajdo, jedilnica in vrt. Kliknite na fotografijo za večji prikaz.</p>
+  </div>
+  <div class="gal" id="gal">
+    <button class="v rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QhKv8uocz4qVr45U12rCTUMtG8yDc4oTvSvZNTXEylS-zQWM_joA15zuZQhPpRbRT95dUNgili5HGF0FOiOjAOvQef41-2qISSVVQ8j0lrhtv998fmYmNHUNyGphCgB9aykJ0W"></button>
+    <button class="s rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R8UbjuALkXxV964scon3AbEt2Hqif4YkO1wChcE1xKMyrBNmEWS16jcn3_L4Qwhl_O-eFE0_CeVJbUH7cWkph1zCUDWZcmQXH8N5oBnAeYFax42pdaLe3d9ffJ5JRwhxBGUI8L"></button>
+    <button class="v rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TU_w-ymcsGb7pf3GX-oHTsBaG414nYjazHL5HGJdJ7zXFeIQ4tGGSYqtmvCfeaqwJbc4DDdF4i3r7wkfo8CdQsRMiX20y2-LXeW-OoYKqY8C8jA1gq4MUbhtTVTP42BlmbEr3VNA"></button>
+    <button class="rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QSD8dqMX-XBt0tfhGJUNxJczG5Zo7rNa7xquwCSFDx58moUbH_1EIy6acn6VXARdODm8iDS8_K0G78kfQPmebHIXMRp3weD0pdQ9QH5HYgSGxbmNqFrA022FUBGXdH6f9QINpV"></button>
+    <button class="rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S-E3rBT6Q9yEDYhI8DJd-QWZLKLF-okLRdTsIlsscanwm6pOGat0UynryDoMHRURxZOI5R2rCRdOhZkNjndYR7jTyvsi_HrjlNfXvoZRUXIhWlUHI4f3Ph1-aHBwGuSmb2rNGC"></button>
+    <button class="s rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Row5qm2MVY03Kq2siyk_tG2Lc1OpGWojyTgm_8Q0afmDNd-g7J0FIO0R49YafewQILlwVv2Nx7iYgVhknKW9Y4BdpzhzGspf3zlXy-KJQrhxDsC6P2w_DDvsx6WIl2AOl3TO_OBNZPrA3B"></button>
+    <button class="rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RzNlrwVCct037r7xj8eNiI5SLrRp1HSOm-ZOhFhn4Ko2nJLkVbjabH3ZoMqXmExvR63I2BEfBp4-7j2zfl632LaWAHy0EUfH4udjS4Yv_OE8IkjwVLGXKCx2RFdjDVPHSuPME"></button>
+    <button class="rev" aria-label="Povečaj fotografijo" data-u="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SlxdrNfg87i1n4KA-iKo_Ji076qVyFUjkJG9A6HD5I6u6E7ihrt2MxIX6fBpdeYUju7aKeloooTKYF_TOP5mxm3ol3Y6dVyu3MrxHPjy0Qbdo4j8-7-3QbMEBdoJzww9l6PXQX"></button>
+  </div>
+</div></section>
+
+<section style="padding-top:40px"><div class="wrap mnenja">
+  <div class="ocena rev">
+    <div class="nad">Gostje o nas</div>
+    <b style="margin-top:18px">4,8</b>
+    <div class="zv">★★★★★</div>
+    <span>povprečna ocena · 11 mnenj na Googlu</span>
+  </div>
+  <div class="citati">
+    <figure class="rev"><blockquote>Odlična turistična kmetija z okusno hrano, dobrim domačim vinom in super gostiteljico. Priporočam obisk!</blockquote><figcaption>Primož Tomšič · Google</figcaption></figure>
+    <figure class="rev"><blockquote>Zelo prijazni in hrana na nivoju. Poskusite njihove rezance s klobaso, kuhano v refošku.</blockquote><figcaption>Aleksandra Petaroš · Google</figcaption></figure>
+    <figure class="rev"><blockquote>Prijazno in ustrežljivo osebje ter okusna hrana. Poskrbljeno tudi za vegetarijance in tiste z raznimi dietami.</blockquote><figcaption>Patricija Pecar · Google</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="najava" style="padding:0"><div class="najava">
+  <div class="foto img" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qbl8dDlUF6mI6GiDGTNK4Lw4bDhupa-OsuFWtIfJWVRvYf_vZCTGpAoQ38KHEq1eEsf47DBbFYjkHBeElpibpus3z5QeZp2GMg0IPIUYhb02xiFQHfgGoxQYGoA4_R67Ah5L8d=w1200');background-position:center 30%"></div>
+  <div class="vs">
+    <div class="nad">Najava obiska</div>
+    <h2>Rezervirajte <em>svojo mizo</em></h2>
+    <p style="max-width:48ch">Ker kuhamo po naročilu, nam vnaprej sporočite, kdaj pridete in koliko vas bo. Odgovorimo v najkrajšem času, za hitrejši dogovor pa nas pokličite na 031 318 801.</p>
+    <form id="rf">
+      <label>Ime in priimek<input id="ime" name="ime" required autocomplete="name"></label>
+      <label>Telefon<input id="tel" name="tel" type="tel" required autocomplete="tel"></label>
+      <label>Datum obiska<input id="datum" name="datum" type="date" required></label>
+      <label>Število oseb<select id="osebe" name="osebe"><option>2-4</option><option>5-10</option><option>11-20</option><option>21-50</option></select></label>
+      <label class="f">Priložnost<select id="kaj" name="kaj"><option>Obed po naročilu</option><option>Degustacija vina in olja</option><option>Praznovanje ali skupina</option><option>Martinovanje</option><option>Drugo</option></select></label>
+      <label class="f">Posebne želje (vegetarijanci, diete, alergije)<textarea id="msg" name="msg" rows="2"></textarea></label>
+      <button class="btn btn-p f" type="submit">Pošlji najavo</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="kontakt"><div class="wrap kontakt">
+  <div class="rev">
+    <div class="nad">Kontakt</div>
+    <h2 style="margin-top:16px">Kako <em>do nas</em></h2>
+    <dl>
+      <div><dt>Naslov</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=Montinjan%201b%2C%206273%20Marezige" target="_blank" rel="noopener">Montinjan 1b, 6273 Marezige</a></dd></div>
+      <div><dt>Telefon</dt><dd><a href="tel:+38631318801">031 318 801</a> · <a href="tel:+38656551141">05 655 11 41</a></dd></div>
+      <div><dt>E-pošta</dt><dd><a href="mailto:turisticna.kmetija.lukac@gmail.com">turisticna.kmetija.lukac@gmail.com</a></dd></div>
+      <div><dt>Obiski</dt><dd>Po predhodni najavi</dd></div>
+    </dl>
+  </div>
+  <div class="map rev"><iframe loading="lazy" title="Zemljevid" src="https://maps.google.com/maps?q=45.51875,13.794576&z=13&output=embed"></iframe></div>
+</div></section>
+
+<footer><div class="wrap"><span class="logo">Lukač</span><span>© <span id="leto-st"></span> Turistična kmetija Lukač · Montinjan 1b, 6273 Marezige</span><span>Izdelava: Spletni Atelje</span></div></footer>
+
+<div class="mob"><a class="btn btn-d" href="tel:+38631318801">Pokliči</a><a class="btn btn-p" href="#najava">Najavi obisk</a></div>
+
+<script>
+document.getElementById('leto-st').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav'),hero=document.querySelector('.hero');
+const onS=()=>nav.classList.toggle('lep',scrollY>hero.offsetHeight-80);addEventListener('scroll',onS,{passive:true});onS();
+document.querySelectorAll('#gal button').forEach(b=>{b.style.backgroundImage=`url('${b.dataset.u}=w900')`;b.onclick=()=>{const d=document.createElement('div');d.className='lb';d.innerHTML=`<img src="${b.dataset.u}=w2000" alt=""><button aria-label="Zapri">×</button>`;d.onclick=()=>d.remove();document.body.appendChild(d);};});
+addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelector('.lb')?.remove()});
+const rf=document.getElementById('rf');
+rf.datum.min=new Date().toISOString().slice(0,10);
+rf.onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(rf));
+const body=`Najava obiska\n\nIme: ${f.ime}\nTelefon: ${f.tel}\nDatum: ${f.datum}\nŠtevilo oseb: ${f.osebe}\nPriložnost: ${f.kaj}\nPosebne želje: ${f.msg||'-'}`;
+location.href=`mailto:turisticna.kmetija.lukac@gmail.com?subject=${encodeURIComponent('Najava obiska: '+f.datum+', '+f.osebe+' os.')}&body=${encodeURIComponent(body)}`;};
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.1});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
